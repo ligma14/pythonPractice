@@ -1,10 +1,12 @@
 import random
 # TODO: Можно добавить счетчик за сколько попыток человек угадал число
+# Еще можно сделать таблицу с рекордами
 
 def numbersGame():
     # Generate a random number between 1 and 1000
     target_number = random.randint(1, 1000)
     previous_guess = None
+    i = 0 # Counts the number of guesses the user made
     
     print("Добро пожаловать в numbersGame")
     print("Правила игры: Вам предстоит угадать число от 1 до 1000")
@@ -20,15 +22,17 @@ def numbersGame():
             
             # Check if the guess is correct
             if guess == target_number:
-                print("Поздравляем! Вы угадали!")
+                print(f'Поздравляем, Вы успешно угадали число за {i} попыток!')
                 break
             
             # Provide feedback on how close the guess is
             if previous_guess is not None:
                 if abs(target_number - guess) < abs(target_number - previous_guess):
-                    print("Горячее!")
+                    i += 1
+                    print(f"Горячее! Попытка номер {i}")
                 else:
-                    print("Холоднее!")
+                    i += 1
+                    print(f"Холоднее! Попытка номер {i}")
             
             # Update the previous guess
             previous_guess = guess
