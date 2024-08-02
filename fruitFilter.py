@@ -17,4 +17,4 @@ strings = ['apple', 'banana', 'cherry', 'blueberry', 'kiwi', 'pineapple']
 # Ожидаемый результат: [9, 9, 6, 6]
 
 result = filter_and_get_lengths(strings)
-print('Result:', result) 
+print('Результат фильтрации списка:', result) 
