@@ -58,11 +58,11 @@ class TicTacGame:
                 continue
 
             if row not in range(3) or col not in range(3):
-                print("Неверные координаты. Введите корректныеы координаты.")
+                print("Неверные координаты. Введите корректные координаты.")
                 continue
 
             if not self.make_move(row, col):
-                print("Координата занята. Введите корректныеы координаты.")
+                print("Координата занята. Введите корректные координаты.")
                 continue
 
             if self.check():
